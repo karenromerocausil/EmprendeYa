@@ -22,18 +22,18 @@
   - [x] Implementar sección de directorio para visualización de Eventos (RF-016).
   - [x] Implementar sección de directorio para visualización de Convocatorias (RF-017).
   - [x] Implementar sección de directorio para visualización de Cursos (RF-018).
-- [/] **Fase 5: Interacción Inversor-Emprendedor (Módulos E y K)**
-  - [ ] Construir el mecanismo y botón de "Me interesa este proyecto" para inversores (RF-014).
-  - [ ] Almacenar y enlazar solicitudes en la base de datos (`contact_requests`).
-  - [ ] Bandeja de entrada en el Panel del Emprendedor para ver solicitudes de inversores (RF-015).
-  - [ ] Panel de Inversor con el registro de proyectos con los que ha interactuado.
-  - [ ] Configurar sistema básico de notificaciones ante nuevos mensajes/solicitudes (RF-025).
-- [ ] **Fase 6: Funciones de Soporte y Panel de Administración (Módulos J, L, M)**
-  - [ ] Añadir función de "Guardar Favoritos" en entidades principales para usuarios (RF-021).
-  - [ ] Desarrollar el Panel de Administración protegido para moderar contenido (RF-023).
-  - [ ] Formularios administrativos (CRUD) de Eventos, Convocatorias y Cursos (RF-019).
-  - [ ] Integrar botón y flujo de reporte de contenido por usuarios (RF-024).
-- [ ] **Fase 7: Seguridad, Pulido y Despliegue**
+- [x] **Fase 5: Interacción Inversor-Emprendedor (Módulos E y K)**
+  - [x] Construir el mecanismo y botón de "Me interesa este proyecto" para inversores (RF-014).
+  - [x] Almacenar y enlazar solicitudes en la base de datos (`contact_requests`).
+  - [x] Bandeja de entrada en el Panel del Emprendedor para ver solicitudes de inversores (RF-015).
+  - [x] Panel de Inversor con el registro de proyectos con los que ha interactuado.
+  - [x] Configurar sistema básico de notificaciones ante nuevos mensajes/solicitudes (RF-025).
+- [x] **Fase 6: Funciones de Soporte y Panel de Administración (Módulos J, L, M)**
+  - [x] Añadir función de "Guardar Favoritos" en entidades principales para usuarios (RF-021).
+  - [x] Desarrollar el Panel de Administración protegido para moderar contenido (RF-023).
+  - [x] Formularios administrativos (CRUD) de Eventos, Convocatorias y Cursos (RF-019).
+  - [x] Integrar botón y flujo de reporte de contenido por usuarios (RF-024).
+- [/] **Fase 7: Seguridad, Pulido y Despliegue**
   - [ ] Configurar e implementar firmemente políticas de Row Level Security (RLS) en tablas de Supabase.
   - [ ] Revisiones de UX/UI, asegurarse de diseño premium (vibrante, animaciones suaves).
   - [ ] Aplicar mejores prácticas de Accesibilidad y SEO (metadatos por página).
