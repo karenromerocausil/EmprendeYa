@@ -1,0 +1,40 @@
+# Tareas MVP EmprendeYa
+
+- [x] **Fase 1: Configuración Inicial y Base de Datos**
+  - [x] Configurar proyecto Next.js (App Router) con TypeScript, Tailwind CSS y shadcn/ui.
+  - [x] Configurar proyecto en Supabase (Auth, Database, Storage) y establecer variables de entorno.
+  - [x] Diseñar e implementar el esquema de base de datos SQL inicial (users, profiles, projects, events, opportunities, courses, categories).
+  - [x] Utilidades del cliente Supabase configuradas (sin Prisma).
+- [x] **Fase 2: Autenticación y Gestión de Usuarios (Módulos A y B)**
+  - [x] Integrar Supabase Auth para Registro, Login, Logout y Recuperación.
+  - [x] Crear pantallas de autenticación (RF-001/RF-002) con selección de rol: `emprendedor` o `inversor`.
+  - [x] Implementar middleware de Next.js para protección de rutas privadas según roles.
+  - [x] Desarrollar la gestión de perfiles (RF-006) diferenciando campos para Emprendedor e Inversor.
+  - [x] Manejar la visibilidad de campos públicos y privados de forma segura (RF-007).
+- [x] **Fase 3: Núcleo de Emprendedores y Proyectos (Módulo C)**
+  - [x] Formulario de creación de proyectos (RF-008) con esquemas de validación Zod.
+  - [x] Integrar Supabase Storage para subida y procesamiento de imágenes del proyecto (RF-011).
+  - [x] Implementar el CRUD y control de estados (borrador, publicado, oculto) del proyecto (RF-009/RF-010).
+  - [x] Construir el Panel de Emprendedor donde se listan sus propios proyectos y estados.
+- [x] **Fase 4: Directorio y Descubrimiento (Módulos D, F, G, H, I)**
+  - [x] Crear el listado público de proyectos con tarjetas visuales optimizadas (RF-012).
+  - [x] Añadir sistema de búsqueda y filtros (sector, etapa, ubicación) (RF-013/RF-020).
+  - [x] Implementar sección de directorio para visualización de Eventos (RF-016).
+  - [x] Implementar sección de directorio para visualización de Convocatorias (RF-017).
+  - [x] Implementar sección de directorio para visualización de Cursos (RF-018).
+- [/] **Fase 5: Interacción Inversor-Emprendedor (Módulos E y K)**
+  - [ ] Construir el mecanismo y botón de "Me interesa este proyecto" para inversores (RF-014).
+  - [ ] Almacenar y enlazar solicitudes en la base de datos (`contact_requests`).
+  - [ ] Bandeja de entrada en el Panel del Emprendedor para ver solicitudes de inversores (RF-015).
+  - [ ] Panel de Inversor con el registro de proyectos con los que ha interactuado.
+  - [ ] Configurar sistema básico de notificaciones ante nuevos mensajes/solicitudes (RF-025).
+- [ ] **Fase 6: Funciones de Soporte y Panel de Administración (Módulos J, L, M)**
+  - [ ] Añadir función de "Guardar Favoritos" en entidades principales para usuarios (RF-021).
+  - [ ] Desarrollar el Panel de Administración protegido para moderar contenido (RF-023).
+  - [ ] Formularios administrativos (CRUD) de Eventos, Convocatorias y Cursos (RF-019).
+  - [ ] Integrar botón y flujo de reporte de contenido por usuarios (RF-024).
+- [ ] **Fase 7: Seguridad, Pulido y Despliegue**
+  - [ ] Configurar e implementar firmemente políticas de Row Level Security (RLS) en tablas de Supabase.
+  - [ ] Revisiones de UX/UI, asegurarse de diseño premium (vibrante, animaciones suaves).
+  - [ ] Aplicar mejores prácticas de Accesibilidad y SEO (metadatos por página).
+  - [ ] Despliegue de producción en Vercel y testeos finales (end-to-end básicos).
