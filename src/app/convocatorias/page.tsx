@@ -1,8 +1,19 @@
+import type { Metadata } from 'next'
 import { createClient } from '@/utils/supabase/server'
 import Link from 'next/link'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Target, ExternalLink } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Convocatorias y Apoyos',
+  description: 'Encuentra financiamiento, concursos y programas de aceleración disponibles para emprendedores colombianos. Actúliza tu aplicación antes de que cierren.',
+  openGraph: {
+    title: 'Convocatorias y Apoyos – EmprendeYa',
+    description: 'Accede a fondos, becas y convocatorias abiertas para emprendedores de la región Caribe.',
+    type: 'website',
+  },
+}
 
 export default async function DirectorioConvocatorias() {
   const supabase = await createClient()
@@ -26,7 +37,7 @@ export default async function DirectorioConvocatorias() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-6 py-12">
+      <main id="main-content" className="max-w-7xl mx-auto px-6 py-12">
         {!oportunidades || oportunidades.length === 0 ? (
           <div className="text-center py-20 text-slate-500 bg-white rounded-3xl border border-slate-200">
              <Target className="w-16 h-16 mx-auto mb-4 text-slate-300" />

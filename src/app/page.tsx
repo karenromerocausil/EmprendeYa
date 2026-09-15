@@ -1,6 +1,17 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Lightbulb, Calendar, BookOpen, Target, Sparkles } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Inicio',
+  description: 'EmprendeYa es la plataforma de emprendimiento de Montería. Publica tu proyecto, conecta con inversores y accede a eventos, convocatorias y cursos para emprendedores.',
+  openGraph: {
+    title: 'EmprendeYa – La red de emprendimiento de Montería',
+    description: 'Conecta tus ideas con el éxito. La plataforma de referencia para emprendedores e inversores en la región Caribe.',
+    type: 'website',
+  },
+}
 
 export default function Home() {
   return (
@@ -13,7 +24,7 @@ export default function Home() {
           </div>
           <span className="text-xl font-bold text-slate-900 tracking-tight">EmprendeYa</span>
         </div>
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600" aria-label="Navegación principal">
           <Link href="/proyectos" className="hover:text-indigo-600 transition-colors">Proyectos</Link>
           <Link href="/eventos" className="hover:text-indigo-600 transition-colors">Eventos</Link>
           <Link href="/convocatorias" className="hover:text-indigo-600 transition-colors">Convocatorias</Link>
@@ -30,7 +41,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <main className="flex-1 flex flex-col items-center justify-center text-center px-6 py-20 md:py-32 bg-gradient-to-br from-indigo-50 via-white to-blue-50">
+      <main id="main-content" className="flex-1 flex flex-col items-center justify-center text-center px-6 py-20 md:py-32 bg-gradient-to-br from-indigo-50 via-white to-blue-50">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold mb-8 animate-in fade-in slide-in-from-bottom-4">
           <Sparkles className="w-4 h-4" />
           <span>La red de emprendimiento de Montería</span>

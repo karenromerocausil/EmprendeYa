@@ -1,8 +1,15 @@
+import type { Metadata } from 'next'
 import { createClient } from '@/utils/supabase/server'
 import { redirect } from 'next/navigation'
 import { signout } from '@/app/auth/actions'
 import { Button } from '@/components/ui/button'
 import { LogOut, User, FolderKanban, Star } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Panel de Control',
+  description: 'Gestiona tu perfil, proyectos y oportunidades en EmprendeYa.',
+  robots: { index: false, follow: false },
+}
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -21,7 +28,7 @@ export default async function DashboardPage() {
     .single()
 
   return (
-    <div className="min-h-screen bg-slate-50 p-6 md:p-12">
+    <div id="main-content" className="min-h-screen bg-slate-50 p-6 md:p-12">
       <div className="max-w-5xl mx-auto space-y-8">
         
         {/* Header */}

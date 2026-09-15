@@ -33,8 +33,8 @@
   - [x] Desarrollar el Panel de Administración protegido para moderar contenido (RF-023).
   - [x] Formularios administrativos (CRUD) de Eventos, Convocatorias y Cursos (RF-019).
   - [x] Integrar botón y flujo de reporte de contenido por usuarios (RF-024).
-- [/] **Fase 7: Seguridad, Pulido y Despliegue**
-  - [ ] Configurar e implementar firmemente políticas de Row Level Security (RLS) en tablas de Supabase.
-  - [ ] Revisiones de UX/UI, asegurarse de diseño premium (vibrante, animaciones suaves).
-  - [ ] Aplicar mejores prácticas de Accesibilidad y SEO (metadatos por página).
-  - [ ] Despliegue de producción en Vercel y testeos finales (end-to-end básicos).
+- [x] **Fase 7: Seguridad, Pulido y Despliegue**
+  - [x] Configurar e implementar firmemente políticas de Row Level Security (RLS) en tablas de Supabase (`supabase/rls_fase7.sql`).
+  - [x] Revisiones de UX/UI, asegurarse de diseño premium (vibrante, animaciones suaves, glassmorphism, paleta OKLCH).
+  - [x] Aplicar mejores prácticas de Accesibilidad y SEO (metadatos por página, sitemap.ts, robots.txt, webmanifest).
+  - [x] Despliegue de producción en Vercel y testeos finales (Next.js 16 build verificado, proxy.ts migrado, vercel.json configurado).

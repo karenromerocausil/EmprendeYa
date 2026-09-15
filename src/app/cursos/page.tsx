@@ -1,8 +1,19 @@
+import type { Metadata } from 'next'
 import { createClient } from '@/utils/supabase/server'
 import Link from 'next/link'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { BookOpen, ExternalLink, DollarSign, Clock } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Formación y Cursos',
+  description: 'Capacita tu emprendimiento con cursos online y presenciales disponibles para emprendedores. Aprende marketing, finanzas, tecnología y más.',
+  openGraph: {
+    title: 'Formación y Cursos – EmprendeYa',
+    description: 'Accede a la oferta formativa más completa para emprendedores en Colombia.',
+    type: 'website',
+  },
+}
 
 export default async function DirectorioCursos() {
   const supabase = await createClient()
@@ -26,7 +37,7 @@ export default async function DirectorioCursos() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-6 py-12">
+      <main id="main-content" className="max-w-7xl mx-auto px-6 py-12">
         {!cursos || cursos.length === 0 ? (
           <div className="text-center py-20 text-slate-500 bg-white rounded-3xl border border-slate-200">
              <BookOpen className="w-16 h-16 mx-auto mb-4 text-slate-300" />

@@ -2,13 +2,14 @@
 
 import { createClient } from '@/utils/supabase/server'
 import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
 
-export async function updateProfile(formData: FormData) {
+export async function updateProfile(formData: FormData): Promise<void> {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
   if (!user) {
-    throw new Error('Not authenticated')
+    redirect('/login')
   }
 
   const name = formData.get('name') as string
@@ -26,11 +27,10 @@ export async function updateProfile(formData: FormData) {
     .eq('id', user.id)
 
   if (error) {
-    return { error: 'No se pudo actualizar el perfil' }
+    // En Next.js 16 la acción no puede retornar valores: lanzamos error
+    throw new Error('No se pudo actualizar el perfil')
   }
 
   revalidatePath('/perfil')
   revalidatePath('/dashboard')
-  
-  return { success: true }
 }

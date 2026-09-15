@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /proyectos
+Allow: /eventos
+Allow: /convocatorias
+Allow: /cursos
+
+# Bloquear rutas privadas
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /perfil
+Disallow: /login
+Disallow: /register
+
+Sitemap: https://emprendeya.vercel.app/sitemap.xml

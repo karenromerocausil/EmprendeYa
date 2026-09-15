@@ -1,8 +1,19 @@
+import type { Metadata } from 'next'
 import { createClient } from '@/utils/supabase/server'
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { MapPin, Calendar, Clock, ExternalLink } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Agenda de Eventos',
+  description: 'Descubre talleres, conferencias y eventos de networking para emprendedores en Montería y el Caribe colombiano.',
+  openGraph: {
+    title: 'Agenda de Eventos – EmprendeYa',
+    description: 'No te pierdas las próximas ferias, charlas y actividades de emprendimiento en tu región.',
+    type: 'website',
+  },
+}
 
 export default async function DirectorioEventos() {
   const supabase = await createClient()
@@ -26,7 +37,7 @@ export default async function DirectorioEventos() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-6 py-12">
+      <main id="main-content" className="max-w-7xl mx-auto px-6 py-12">
         {!events || events.length === 0 ? (
           <div className="text-center py-20 text-slate-500 bg-white rounded-3xl border border-slate-200">
              <Calendar className="w-16 h-16 mx-auto mb-4 text-slate-300" />

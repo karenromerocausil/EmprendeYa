@@ -1,9 +1,20 @@
+import type { Metadata } from 'next'
 import { createClient } from '@/utils/supabase/server'
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { MapPin, Tag, Search, Rocket } from 'lucide-react'
 import { Input } from '@/components/ui/input'
+
+export const metadata: Metadata = {
+  title: 'Directorio de Proyectos',
+  description: 'Descubre los emprendimientos más innovadores de Montería y la región Caribe. Busca por sector, etapa y ubicación.',
+  openGraph: {
+    title: 'Directorio de Proyectos – EmprendeYa',
+    description: 'Explora proyectos locales innovadores y conecta con emprendedores de la región.',
+    type: 'website',
+  },
+}
 
 // Nota: Al usar <select> nativos simplificamos el form en Server Components para evitar client-side state
 export default async function DirectorioProyectos(props: {
@@ -46,7 +57,7 @@ export default async function DirectorioProyectos(props: {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-6 py-12">
+      <main id="main-content" className="max-w-7xl mx-auto px-6 py-12">
         {/* Filters */}
         <form className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col md:flex-row gap-4 mb-12">
           <div className="flex-1 relative">
