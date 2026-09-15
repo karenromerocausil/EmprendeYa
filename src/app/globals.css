@@ -3,8 +3,19 @@
 @import "shadcn/tailwind.css";
 
 /* ============================================================
-   EmprendeYa - Design System
-   Paleta: Indigo/Violet principal · Emerald acento · Slate neutros
+   INNOVA LINK - Design System
+   Paleta Oficial:
+   - Verde Innovación: #447A00 (Principal, botones, CTA, crecimiento)
+   - Azul Confianza:   #014F78 (Títulos, enlaces, información, tecnología)
+   - Verde Claro:      #6FAE2A (Hover, etiquetas, estados positivos)
+   - Azul Claro:       #3B82A0 (Elementos secundarios, gráficos)
+   - Azul Oscuro:      #163A4A (Texto principal y encabezados)
+   - Verde Muy Claro:  #EEF5E5 (Fondos de tarjetas, badges y secciones)
+   - Azul Muy Claro:   #EAF3F7 (Fondos informativos)
+   - Blanco:           #FFFFFF (Fondo de tarjetas/componentes)
+   - Gris Texto:       #475569 (Texto secundario)
+   - Gris Fondo:       #F8FAFC (Fondo general de la aplicación)
+   - Borde:            #E2E8F0 (Bordes y divisores)
    ============================================================ */
 
 @custom-variant dark (&:is(.dark *));
@@ -51,90 +62,124 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Tokens de colores directos INNOVA LINK */
+  --color-innova-green: #447A00;
+  --color-innova-green-hover: #6FAE2A;
+  --color-innova-green-light: #6FAE2A;
+  --color-innova-green-subtle: #EEF5E5;
+  --color-innova-blue: #014F78;
+  --color-innova-blue-light: #3B82A0;
+  --color-innova-blue-subtle: #EAF3F7;
+  --color-innova-dark: #163A4A;
+  --color-innova-gray: #475569;
+  --color-innova-bg: #F8FAFC;
+  --color-innova-border: #E2E8F0;
+
   /* Brand custom colors */
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
+  --color-brand-secondary: var(--brand-secondary);
   --color-brand-muted: var(--brand-muted);
 }
 
 :root {
-  /* Neutros */
-  --background: oklch(0.985 0.003 264);
-  --foreground: oklch(0.18 0.02 264);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 264);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 264);
-  /* Indigo vibrante como primario */
-  --primary: oklch(0.52 0.22 264);
-  --primary-foreground: oklch(0.98 0.005 264);
-  --secondary: oklch(0.94 0.03 264);
-  --secondary-foreground: oklch(0.32 0.12 264);
-  --muted: oklch(0.95 0.01 264);
-  --muted-foreground: oklch(0.52 0.04 264);
-  --accent: oklch(0.93 0.05 264);
-  --accent-foreground: oklch(0.38 0.18 264);
-  --destructive: oklch(0.59 0.24 27);
-  --border: oklch(0.90 0.02 264);
-  --input: oklch(0.90 0.02 264);
-  --ring: oklch(0.65 0.14 264);
+  /* Fondo general y texto principal */
+  --background: #F8FAFC;
+  --foreground: #163A4A;
+
+  /* Tarjetas y ventanas */
+  --card: #FFFFFF;
+  --card-foreground: #163A4A;
+  --popover: #FFFFFF;
+  --popover-foreground: #163A4A;
+
+  /* Verde Innovación como color primario (CTA, botones, crecimiento) */
+  --primary: #447A00;
+  --primary-foreground: #FFFFFF;
+
+  /* Azul Muy Claro / Azul Confianza como secundario */
+  --secondary: #EAF3F7;
+  --secondary-foreground: #014F78;
+
+  /* Verde Muy Claro como acento y muted */
+  --muted: #EEF5E5;
+  --muted-foreground: #475569;
+  --accent: #EEF5E5;
+  --accent-foreground: #447A00;
+
+  /* Sistema y bordes */
+  --destructive: #DC2626;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #447A00;
+
   /* Charts */
-  --chart-1: oklch(0.52 0.22 264);
-  --chart-2: oklch(0.55 0.18 162);
-  --chart-3: oklch(0.62 0.16 40);
-  --chart-4: oklch(0.68 0.14 300);
-  --chart-5: oklch(0.48 0.20 20);
+  --chart-1: #447A00;
+  --chart-2: #014F78;
+  --chart-3: #6FAE2A;
+  --chart-4: #3B82A0;
+  --chart-5: #163A4A;
   --radius: 0.75rem;
+
   /* Sidebar */
-  --sidebar: oklch(0.975 0.008 264);
-  --sidebar-foreground: oklch(0.18 0.02 264);
-  --sidebar-primary: oklch(0.52 0.22 264);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.93 0.05 264);
-  --sidebar-accent-foreground: oklch(0.38 0.18 264);
-  --sidebar-border: oklch(0.90 0.02 264);
-  --sidebar-ring: oklch(0.65 0.14 264);
-  /* Brand */
-  --brand: oklch(0.52 0.22 264);
-  --brand-foreground: oklch(0.98 0 0);
-  --brand-muted: oklch(0.92 0.07 264);
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #163A4A;
+  --sidebar-primary: #447A00;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EEF5E5;
+  --sidebar-accent-foreground: #447A00;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #447A00;
+
+  /* Tokens de Marca */
+  --brand: #447A00;
+  --brand-foreground: #FFFFFF;
+  --brand-secondary: #014F78;
+  --brand-muted: #EEF5E5;
 }
 
 .dark {
-  --background: oklch(0.11 0.02 264);
-  --foreground: oklch(0.96 0.008 264);
-  --card: oklch(0.15 0.025 264);
-  --card-foreground: oklch(0.96 0.008 264);
-  --popover: oklch(0.15 0.025 264);
-  --popover-foreground: oklch(0.96 0.008 264);
-  --primary: oklch(0.68 0.20 264);
-  --primary-foreground: oklch(0.10 0.02 264);
-  --secondary: oklch(0.22 0.04 264);
-  --secondary-foreground: oklch(0.90 0.01 264);
-  --muted: oklch(0.20 0.03 264);
-  --muted-foreground: oklch(0.62 0.06 264);
-  --accent: oklch(0.24 0.06 264);
-  --accent-foreground: oklch(0.85 0.08 264);
-  --destructive: oklch(0.68 0.21 22);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.55 0.14 264);
-  --chart-1: oklch(0.68 0.20 264);
-  --chart-2: oklch(0.60 0.18 162);
-  --chart-3: oklch(0.70 0.16 40);
-  --chart-4: oklch(0.72 0.14 300);
-  --chart-5: oklch(0.62 0.20 20);
-  --sidebar: oklch(0.14 0.025 264);
-  --sidebar-foreground: oklch(0.96 0.008 264);
-  --sidebar-primary: oklch(0.68 0.20 264);
-  --sidebar-primary-foreground: oklch(0.10 0.02 264);
-  --sidebar-accent: oklch(0.24 0.06 264);
-  --sidebar-accent-foreground: oklch(0.85 0.08 264);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.55 0.14 264);
-  --brand: oklch(0.68 0.20 264);
-  --brand-foreground: oklch(0.10 0.02 264);
-  --brand-muted: oklch(0.22 0.08 264);
+  --background: #0B1C24;
+  --foreground: #F8FAFC;
+  --card: #122834;
+  --card-foreground: #F8FAFC;
+  --popover: #122834;
+  --popover-foreground: #F8FAFC;
+
+  /* En dark mode, Verde Claro ofrece mayor contraste y legibilidad */
+  --primary: #6FAE2A;
+  --primary-foreground: #0B1C24;
+  --secondary: #163A4A;
+  --secondary-foreground: #EAF3F7;
+  --muted: #163A4A;
+  --muted-foreground: #94A3B8;
+  --accent: #1D475B;
+  --accent-foreground: #6FAE2A;
+  --destructive: #EF4444;
+  --border: rgba(226, 232, 240, 0.12);
+  --input: rgba(226, 232, 240, 0.14);
+  --ring: #6FAE2A;
+
+  --chart-1: #6FAE2A;
+  --chart-2: #3B82A0;
+  --chart-3: #447A00;
+  --chart-4: #014F78;
+  --chart-5: #EAF3F7;
+
+  --sidebar: #122834;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-primary: #6FAE2A;
+  --sidebar-primary-foreground: #0B1C24;
+  --sidebar-accent: #163A4A;
+  --sidebar-accent-foreground: #6FAE2A;
+  --sidebar-border: rgba(226, 232, 240, 0.12);
+  --sidebar-ring: #6FAE2A;
+
+  --brand: #6FAE2A;
+  --brand-foreground: #0B1C24;
+  --brand-secondary: #3B82A0;
+  --brand-muted: #163A4A;
 }
 
 /* ============================================================
@@ -155,18 +200,18 @@
     scroll-behavior: smooth;
   }
 
-  /* Tipografía optimizada */
+  /* Encabezados con Azul Oscuro */
   h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight;
+    @apply tracking-tight font-bold text-innova-dark dark:text-slate-100;
   }
 
-  /* Selección de texto con color de marca */
+  /* Selección de texto con Verde Innovación */
   ::selection {
-    background-color: oklch(0.52 0.22 264 / 20%);
-    color: oklch(0.18 0.02 264);
+    background-color: rgba(68, 122, 0, 0.22);
+    color: #163A4A;
   }
 
-  /* Scrollbar sutil */
+  /* Scrollbar estético */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -175,80 +220,122 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: oklch(0.75 0.06 264);
+    background: #3B82A0;
     border-radius: 99px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: oklch(0.60 0.12 264);
+    background: #014F78;
   }
 
-  /* Focus visible accesible */
+  /* Focus visible accesible con Verde Innovación */
   :focus-visible {
-    outline: 2px solid oklch(0.52 0.22 264);
+    outline: 2px solid #447A00;
     outline-offset: 2px;
     border-radius: 4px;
   }
 }
 
 /* ============================================================
-   Utilidades de diseño premium
+   Utilidades de diseño INNOVA LINK
    ============================================================ */
 @layer utilities {
-  /* Gradiente de marca */
+  /* Gradiente oficial INNOVA LINK (Verde Innovación -> Azul Confianza) */
   .gradient-brand {
-    background: linear-gradient(135deg, oklch(0.52 0.22 264), oklch(0.56 0.22 284));
+    background: linear-gradient(135deg, #447A00 0%, #014F78 100%);
   }
 
-  /* Gradiente hero */
+  /* Gradiente Hero sutil */
   .gradient-hero {
     background: linear-gradient(
       135deg,
-      oklch(0.96 0.04 264) 0%,
-      oklch(0.98 0.01 264) 50%,
-      oklch(0.95 0.04 196) 100%
+      #EEF5E5 0%,
+      #F8FAFC 50%,
+      #EAF3F7 100%
     );
+  }
+
+  /* Gradiente Azul Confianza */
+  .gradient-blue {
+    background: linear-gradient(135deg, #014F78 0%, #3B82A0 100%);
   }
 
   /* Glassmorphism */
   .glass {
-    background: oklch(1 0 0 / 70%);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px) saturate(1.8);
-    border: 1px solid oklch(1 0 0 / 30%);
+    border: 1px solid rgba(226, 232, 240, 0.8);
   }
 
   .glass-dark {
-    background: oklch(0.15 0.02 264 / 80%);
+    background: rgba(18, 40, 52, 0.85);
     backdrop-filter: blur(16px) saturate(1.8);
-    border: 1px solid oklch(1 0 0 / 8%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  /* Sombra suave de marca */
+  /* Sombras de marca */
   .shadow-brand {
-    box-shadow: 0 8px 32px oklch(0.52 0.22 264 / 25%);
+    box-shadow: 0 8px 30px rgba(68, 122, 0, 0.18);
+  }
+
+  .shadow-brand-blue {
+    box-shadow: 0 8px 30px rgba(1, 79, 120, 0.20);
   }
 
   .shadow-brand-lg {
-    box-shadow: 0 16px 48px oklch(0.52 0.22 264 / 30%);
+    box-shadow: 0 16px 48px rgba(1, 79, 120, 0.24);
   }
 
-  /* Texto gradiente */
+  /* Textos en gradiente */
   .text-gradient {
-    background: linear-gradient(135deg, oklch(0.52 0.22 264), oklch(0.56 0.22 284));
+    background: linear-gradient(135deg, #447A00 0%, #014F78 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  /* Card premium con hover */
+  .text-gradient-green {
+    background: linear-gradient(135deg, #447A00 0%, #6FAE2A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #014F78 0%, #3B82A0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Card premium interactiva con Verde Claro en hover */
   .card-premium {
     @apply bg-card border border-border rounded-2xl transition-all duration-300;
   }
   .card-premium:hover {
     @apply shadow-lg -translate-y-0.5;
-    border-color: oklch(0.65 0.14 264 / 50%);
+    border-color: #6FAE2A;
   }
 
-  /* Animación de aparición */
+  /* Badges y fondos suaves INNOVA LINK */
+  .badge-green {
+    @apply bg-[#EEF5E5] text-[#447A00] font-semibold border border-[#6FAE2A]/20;
+  }
+
+  .badge-blue {
+    @apply bg-[#EAF3F7] text-[#014F78] font-semibold border border-[#3B82A0]/20;
+  }
+
+  /* Botón principal INNOVA LINK */
+  .btn-innova-primary {
+    @apply bg-[#447A00] hover:bg-[#6FAE2A] text-white font-medium shadow-md transition-all hover:shadow-lg active:scale-[0.98];
+  }
+
+  /* Botón secundario INNOVA LINK */
+  .btn-innova-secondary {
+    @apply bg-[#014F78] hover:bg-[#3B82A0] text-white font-medium shadow-md transition-all hover:shadow-lg active:scale-[0.98];
+  }
+
+  /* Animaciones */
   .fade-up {
     animation: fadeUp 0.5s ease-out both;
   }
@@ -257,7 +344,6 @@
   .fade-up-delay-3 { animation-delay: 0.3s; }
   .fade-up-delay-4 { animation-delay: 0.4s; }
 
-  /* Pulse suave para indicadores */
   .pulse-brand {
     animation: pulseBrand 2s ease-in-out infinite;
   }
@@ -279,10 +365,10 @@
 
 @keyframes pulseBrand {
   0%, 100% {
-    box-shadow: 0 0 0 0 oklch(0.52 0.22 264 / 40%);
+    box-shadow: 0 0 0 0 rgba(68, 122, 0, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 8px oklch(0.52 0.22 264 / 0%);
+    box-shadow: 0 0 0 8px rgba(68, 122, 0, 0);
   }
 }
 
@@ -291,13 +377,12 @@
   100% { background-position: 200% 0; }
 }
 
-/* Skeleton loader */
 .skeleton {
   background: linear-gradient(
     90deg,
-    oklch(0.92 0.02 264) 25%,
-    oklch(0.96 0.01 264) 50%,
-    oklch(0.92 0.02 264) 75%
+    #EEF5E5 25%,
+    #F8FAFC 50%,
+    #EEF5E5 75%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;

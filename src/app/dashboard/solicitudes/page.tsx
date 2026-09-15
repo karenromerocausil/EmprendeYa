@@ -57,27 +57,27 @@ export default async function SolicitudesPage() {
                         {sol.profiles?.name || 'Inversor Anónimo'}
                       </CardTitle>
                       <CardDescription className="flex items-center gap-2 mt-1">
-                        Proyecto: <strong className="text-indigo-600">{sol.projects?.name}</strong>
+                        Proyecto: <strong className="text-[#014F78]">{sol.projects?.name}</strong>
                       </CardDescription>
                     </div>
-                    {sol.status === 'pendiente' && <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-bold uppercase">Pendiente</span>}
-                    {sol.status === 'aceptada' && <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold uppercase">Aceptada</span>}
-                    {sol.status === 'rechazada' && <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-bold uppercase">Rechazada</span>}
+                    {sol.status === 'pendiente' && <span className="px-3 py-1 bg-[#EAF3F7] text-[#014F78] border border-[#3B82A0]/20 rounded-full text-xs font-bold uppercase">Pendiente</span>}
+                    {sol.status === 'aceptada' && <span className="px-3 py-1 bg-[#EEF5E5] text-[#447A00] border border-[#6FAE2A]/20 rounded-full text-xs font-bold uppercase">Aceptada</span>}
+                    {sol.status === 'rechazada' && <span className="px-3 py-1 bg-red-50 text-red-700 border border-red-200 rounded-full text-xs font-bold uppercase">Rechazada</span>}
                   </div>
                 </CardHeader>
                 <CardContent className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                  <div className="flex items-center gap-4 text-sm text-slate-500">
+                  <div className="flex items-center gap-4 text-sm text-[#475569]">
                     <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {new Date(sol.created_at).toLocaleDateString()}</span>
                     <span>📍 {sol.profiles?.city || 'Ubicación no especificada'}</span>
                   </div>
                   
                   {sol.status === 'pendiente' ? (
                     <div className="flex gap-2 w-full sm:w-auto">
-                      <Button variant="outline" className="w-full sm:w-auto text-red-600 hover:bg-red-50 hover:text-red-700">Rechazar</Button>
-                      <Button className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700">Aceptar y Ver Contacto</Button>
+                      <Button variant="outline" className="w-full sm:w-auto text-red-600 hover:bg-red-50 hover:text-red-700 border-[#E2E8F0]">Rechazar</Button>
+                      <Button className="w-full sm:w-auto bg-[#447A00] hover:bg-[#6FAE2A] text-white font-semibold">Aceptar y Ver Contacto</Button>
                     </div>
                   ) : sol.status === 'aceptada' ? (
-                    <Button variant="secondary" className="w-full sm:w-auto">Ver Datos de Contacto</Button>
+                    <Button variant="secondary" className="w-full sm:w-auto bg-[#EAF3F7] text-[#014F78] hover:bg-[#3B82A0] hover:text-white">Ver Datos de Contacto</Button>
                   ) : null}
                 </CardContent>
               </Card>

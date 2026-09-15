@@ -1,11 +1,11 @@
 {
-  "name": "EmprendeYa",
-  "short_name": "EmprendeYa",
-  "description": "La red de emprendimiento de Montería",
+  "name": "INNOVA LINK",
+  "short_name": "INNOVA LINK",
+  "description": "La red de emprendimiento e innovación",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#4f46e5",
+  "background_color": "#F8FAFC",
+  "theme_color": "#447A00",
   "icons": [
     {
       "src": "/icon-192.png",

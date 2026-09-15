@@ -19,12 +19,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://emprendeya.vercel.a
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "EmprendeYa – La red de emprendimiento de Montería",
-    template: "%s | EmprendeYa",
+    default: "INNOVA LINK – Conectando Innovación y Crecimiento",
+    template: "%s | INNOVA LINK",
   },
   description:
-    "EmprendeYa conecta emprendedores e inversores de Montería y la región Caribe. Publica tu proyecto, descubre convocatorias, eventos y cursos para hacer crecer tu negocio.",
+    "INNOVA LINK conecta emprendedores e inversores de Montería y la región. Publica tu proyecto, descubre convocatorias, eventos y cursos para hacer crecer tu negocio.",
   keywords: [
+    "INNOVA LINK",
     "emprendimiento",
     "Montería",
     "inversión",
@@ -33,11 +34,11 @@ export const metadata: Metadata = {
     "convocatorias",
     "eventos",
     "cursos",
-    "emprendedores Colombia",
+    "innovación Colombia",
   ],
-  authors: [{ name: "EmprendeYa" }],
-  creator: "EmprendeYa",
-  publisher: "EmprendeYa",
+  authors: [{ name: "INNOVA LINK" }],
+  creator: "INNOVA LINK",
+  publisher: "INNOVA LINK",
   robots: {
     index: true,
     follow: true,
@@ -53,26 +54,26 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_CO",
     url: siteUrl,
-    siteName: "EmprendeYa",
-    title: "EmprendeYa – La red de emprendimiento de Montería",
+    siteName: "INNOVA LINK",
+    title: "INNOVA LINK – Conectando Innovación y Crecimiento",
     description:
-      "Conecta tus ideas con el éxito. La plataforma de emprendimiento e inversión de la región Caribe.",
+      "Conecta tus ideas con el éxito. La plataforma de innovación y capital para emprendedores de la región.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "EmprendeYa – Plataforma de Emprendimiento",
+        alt: "INNOVA LINK – Plataforma de Emprendimiento e Inversión",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "EmprendeYa – La red de emprendimiento de Montería",
+    title: "INNOVA LINK – Conectando Innovación y Crecimiento",
     description:
-      "Conecta tus ideas con el éxito. Proyectos, eventos, convocatorias y cursos para emprendedores.",
+      "Plataforma de innovación, proyectos y capital para emprendedores.",
     images: ["/og-image.png"],
-    creator: "@emprendeya",
+    creator: "@innovalink",
   },
   icons: {
     icon: "/favicon.ico",
@@ -84,8 +85,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0f0f1a" },
+    { media: "(prefers-color-scheme: light)", color: "#447A00" },
+    { media: "(prefers-color-scheme: dark)", color: "#0B1C24" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -101,7 +102,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-[9999] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-[9999] focus:bg-[#447A00] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold shadow-lg"
         >
           Saltar al contenido principal
         </a>

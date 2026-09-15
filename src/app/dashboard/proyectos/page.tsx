@@ -38,27 +38,27 @@ export default async function ProyectosPage() {
 
   const getStatusBadge = (status: string) => {
     switch (status) {
-      case 'publicado': return <span className="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">Publicado</span>;
-      case 'oculto': return <span className="px-2 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-semibold">Oculto</span>;
-      default: return <span className="px-2 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold">Borrador</span>;
+      case 'publicado': return <span className="px-2.5 py-1 bg-[#EEF5E5] text-[#447A00] border border-[#6FAE2A]/30 rounded-full text-xs font-bold">Publicado</span>;
+      case 'oculto': return <span className="px-2.5 py-1 bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] rounded-full text-xs font-semibold">Oculto</span>;
+      default: return <span className="px-2.5 py-1 bg-[#EAF3F7] text-[#014F78] border border-[#3B82A0]/20 rounded-full text-xs font-bold">Borrador</span>;
     }
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 p-6 md:p-12">
+    <div className="min-h-screen bg-[#F8FAFC] p-6 md:p-12">
       <div className="max-w-6xl mx-auto space-y-6">
         
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white p-6 rounded-2xl shadow-sm border border-[#E2E8F0]">
           <div>
-            <h1 className="text-3xl font-bold text-slate-900">Mis Proyectos</h1>
-            <p className="text-slate-500 mt-1">Gestiona los emprendimientos que has creado</p>
+            <h1 className="text-3xl font-bold text-[#163A4A]">Mis Proyectos</h1>
+            <p className="text-[#475569] mt-1">Gestiona los emprendimientos que has creado</p>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-3">
              <Link href="/dashboard">
-               <Button variant="outline">Volver</Button>
+               <Button variant="outline" className="border-[#E2E8F0] text-[#014F78] hover:bg-[#EAF3F7]">Volver</Button>
              </Link>
              <Link href="/dashboard/proyectos/nuevo">
-               <Button className="bg-indigo-600 hover:bg-indigo-700 gap-2">
+               <Button className="bg-[#447A00] hover:bg-[#6FAE2A] text-white font-semibold gap-2 shadow-sm">
                  <PlusCircle className="w-4 h-4" />
                  Nuevo Proyecto
                </Button>
@@ -67,14 +67,14 @@ export default async function ProyectosPage() {
         </div>
 
         {(!projects || projects.length === 0) ? (
-          <div className="bg-white border border-slate-200 border-dashed rounded-2xl p-12 text-center">
-            <div className="w-16 h-16 bg-indigo-50 text-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="bg-white border border-[#E2E8F0] border-dashed rounded-2xl p-12 text-center">
+            <div className="w-16 h-16 bg-[#EEF5E5] text-[#447A00] rounded-full flex items-center justify-center mx-auto mb-4">
               <PlusCircle className="w-8 h-8" />
             </div>
-            <h2 className="text-xl font-semibold text-slate-900 mb-2">Aún no tienes proyectos</h2>
-            <p className="text-slate-500 max-w-md mx-auto mb-6">Crea tu primer proyecto para que los inversores puedan descubrir tu emprendimiento y conectar contigo.</p>
+            <h2 className="text-xl font-bold text-[#163A4A] mb-2">Aún no tienes proyectos</h2>
+            <p className="text-[#475569] max-w-md mx-auto mb-6">Crea tu primer proyecto para que los inversores puedan descubrir tu emprendimiento y conectar contigo.</p>
             <Link href="/dashboard/proyectos/nuevo">
-              <Button className="bg-indigo-600 hover:bg-indigo-700">Crear mi primer proyecto</Button>
+              <Button className="bg-[#447A00] hover:bg-[#6FAE2A] text-white font-semibold shadow-md">Crear mi primer proyecto</Button>
             </Link>
           </div>
         ) : (
@@ -82,7 +82,7 @@ export default async function ProyectosPage() {
             {projects.map(project => {
               const mainImage = images?.find(img => img.project_id === project.id)?.url
               return (
-                <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow border-slate-100 flex flex-col">
+                <Card key={project.id} className="overflow-hidden hover:shadow-lg hover:border-[#6FAE2A] transition-all border-[#E2E8F0] flex flex-col bg-white rounded-2xl">
                   <div className="h-48 bg-slate-100 relative w-full overflow-hidden flex items-center justify-center">
                     {mainImage ? (
                       <img src={mainImage} alt={project.name} className="w-full h-full object-cover" />

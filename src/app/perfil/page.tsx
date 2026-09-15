@@ -85,7 +85,7 @@ export default async function PerfilPage() {
                 />
               </div>
 
-              <Button type="submit" className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700">
+              <Button type="submit" className="w-full sm:w-auto bg-[#447A00] hover:bg-[#6FAE2A] text-white font-semibold shadow-md">
                 Guardar Cambios
               </Button>
             </form>

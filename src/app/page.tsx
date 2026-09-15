@@ -5,65 +5,69 @@ import { ArrowRight, Lightbulb, Calendar, BookOpen, Target, Sparkles } from 'luc
 
 export const metadata: Metadata = {
   title: 'Inicio',
-  description: 'EmprendeYa es la plataforma de emprendimiento de Montería. Publica tu proyecto, conecta con inversores y accede a eventos, convocatorias y cursos para emprendedores.',
+  description: 'INNOVA LINK es la plataforma de innovación y emprendimiento de Montería. Publica tu proyecto, conecta con inversores y accede a eventos, convocatorias y cursos.',
   openGraph: {
-    title: 'EmprendeYa – La red de emprendimiento de Montería',
-    description: 'Conecta tus ideas con el éxito. La plataforma de referencia para emprendedores e inversores en la región Caribe.',
+    title: 'INNOVA LINK – Conectando Innovación y Crecimiento',
+    description: 'Conecta tus ideas con el éxito. La plataforma de referencia para emprendedores e inversores en la región.',
     type: 'website',
   },
 }
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50">
+    <div className="flex flex-col min-h-screen bg-[#F8FAFC]">
       {/* Navbar */}
-      <header className="px-6 py-4 flex items-center justify-between bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-            <Sparkles className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xl font-bold text-slate-900 tracking-tight">EmprendeYa</span>
+      <header className="px-6 py-4 flex items-center justify-between bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-[#E2E8F0]">
+        <div className="flex items-center gap-2.5">
+          <img src="/innova-icon.png" alt="INNOVA LINK Logo" className="w-9 h-9 object-contain rounded-lg shadow-sm" />
+          <span className="text-xl font-black text-[#163A4A] tracking-tight">
+            INNOVA <span className="text-[#447A00]">LINK</span>
+          </span>
         </div>
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600" aria-label="Navegación principal">
-          <Link href="/proyectos" className="hover:text-indigo-600 transition-colors">Proyectos</Link>
-          <Link href="/eventos" className="hover:text-indigo-600 transition-colors">Eventos</Link>
-          <Link href="/convocatorias" className="hover:text-indigo-600 transition-colors">Convocatorias</Link>
-          <Link href="/cursos" className="hover:text-indigo-600 transition-colors">Cursos</Link>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#475569]" aria-label="Navegación principal">
+          <Link href="/proyectos" className="hover:text-[#014F78] transition-colors">Proyectos</Link>
+          <Link href="/eventos" className="hover:text-[#014F78] transition-colors">Eventos</Link>
+          <Link href="/convocatorias" className="hover:text-[#014F78] transition-colors">Convocatorias</Link>
+          <Link href="/cursos" className="hover:text-[#014F78] transition-colors">Cursos</Link>
         </nav>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <Link href="/login">
-            <Button variant="ghost" className="hidden sm:inline-flex">Iniciar Sesión</Button>
+            <Button variant="ghost" className="hidden sm:inline-flex text-[#014F78] hover:bg-[#EAF3F7]">
+              Iniciar Sesión
+            </Button>
           </Link>
           <Link href="/register">
-            <Button className="bg-indigo-600 hover:bg-indigo-700">Comenzar</Button>
+            <Button className="bg-[#447A00] hover:bg-[#6FAE2A] text-white font-medium shadow-md shadow-[#447A00]/20 transition-all hover:scale-[1.02]">
+              Comenzar
+            </Button>
           </Link>
         </div>
       </header>
 
       {/* Hero Section */}
-      <main id="main-content" className="flex-1 flex flex-col items-center justify-center text-center px-6 py-20 md:py-32 bg-gradient-to-br from-indigo-50 via-white to-blue-50">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold mb-8 animate-in fade-in slide-in-from-bottom-4">
-          <Sparkles className="w-4 h-4" />
-          <span>La red de emprendimiento de Montería</span>
+      <main id="main-content" className="flex-1 flex flex-col items-center justify-center text-center px-6 py-20 md:py-32 bg-gradient-to-br from-[#EEF5E5] via-[#F8FAFC] to-[#EAF3F7]">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EEF5E5] text-[#447A00] border border-[#6FAE2A]/30 text-sm font-semibold mb-8 animate-in fade-in slide-in-from-bottom-4 shadow-sm">
+          <Sparkles className="w-4 h-4 text-[#447A00]" />
+          <span>La red de emprendimiento e innovación</span>
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight max-w-4xl mb-6 animate-in fade-in slide-in-from-bottom-6 duration-500">
-          Conecta tus ideas con <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">el éxito</span>
+        <h1 className="text-5xl md:text-7xl font-extrabold text-[#163A4A] tracking-tight max-w-4xl mb-6 animate-in fade-in slide-in-from-bottom-6 duration-500 leading-tight">
+          Conecta tus ideas con <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#447A00] via-[#014F78] to-[#3B82A0]">el éxito</span>
         </h1>
         
-        <p className="text-lg md:text-xl text-slate-600 max-w-2xl mb-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
-          Centralizamos oportunidades, eventos, convocatorias y cursos para emprendedores. Publica tu proyecto y encuentra inversores dispuestos a apoyarte.
+        <p className="text-lg md:text-xl text-[#475569] max-w-2xl mb-10 animate-in fade-in slide-in-from-bottom-8 duration-700 leading-relaxed">
+          Centralizamos oportunidades, eventos, convocatorias y formación para emprendedores. Publica tu proyecto y encuentra inversores estratégicos para impulsar tu crecimiento.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000">
           <Link href="/proyectos">
-            <Button size="lg" className="h-14 px-8 text-lg bg-indigo-600 hover:bg-indigo-700 w-full sm:w-auto shadow-lg hover:shadow-indigo-500/25 transition-all">
+            <Button size="lg" className="h-14 px-8 text-lg bg-[#447A00] hover:bg-[#6FAE2A] text-white font-semibold w-full sm:w-auto shadow-lg shadow-[#447A00]/25 transition-all hover:scale-[1.02]">
               Explorar Proyectos
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>
           <Link href="/register">
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg w-full sm:w-auto bg-white hover:bg-slate-50">
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg w-full sm:w-auto bg-white border-[#E2E8F0] text-[#014F78] hover:bg-[#EAF3F7] font-semibold transition-all">
               Registrar mi Emprendimiento
             </Button>
           </Link>
@@ -71,39 +75,39 @@ export default function Home() {
       </main>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white border-t border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
-          <Link href="/proyectos" className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-indigo-100 transition-all text-left">
-            <div className="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <Link href="/proyectos" className="group p-8 rounded-3xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-xl hover:border-[#6FAE2A] transition-all text-left">
+            <div className="w-14 h-14 bg-[#EEF5E5] text-[#447A00] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
               <Lightbulb className="w-7 h-7" />
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Proyectos Locales</h3>
-            <p className="text-slate-600">Descubre los emprendimientos más innovadores de la región y conecta con sus creadores.</p>
+            <h3 className="text-xl font-bold text-[#163A4A] mb-3">Proyectos Locales</h3>
+            <p className="text-[#475569] text-sm leading-relaxed">Descubre los emprendimientos más innovadores de la región y conecta con sus creadores.</p>
           </Link>
 
-          <Link href="/eventos" className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-blue-100 transition-all text-left">
-            <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <Link href="/eventos" className="group p-8 rounded-3xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-xl hover:border-[#3B82A0] transition-all text-left">
+            <div className="w-14 h-14 bg-[#EAF3F7] text-[#014F78] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
               <Calendar className="w-7 h-7" />
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Eventos</h3>
-            <p className="text-slate-600">No te pierdas de networking, ferias y charlas pensadas para tu crecimiento.</p>
+            <h3 className="text-xl font-bold text-[#163A4A] mb-3">Eventos</h3>
+            <p className="text-[#475569] text-sm leading-relaxed">No te pierdas networking, ferias y charlas pensadas para tu crecimiento y conexiones.</p>
           </Link>
 
-          <Link href="/convocatorias" className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-emerald-100 transition-all text-left">
-            <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <Link href="/convocatorias" className="group p-8 rounded-3xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-xl hover:border-[#6FAE2A] transition-all text-left">
+            <div className="w-14 h-14 bg-[#EEF5E5] text-[#447A00] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
               <Target className="w-7 h-7" />
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Convocatorias</h3>
-            <p className="text-slate-600">Accede a fondos, concursos y programas de apoyo del gobierno e instituciones.</p>
+            <h3 className="text-xl font-bold text-[#163A4A] mb-3">Convocatorias</h3>
+            <p className="text-[#475569] text-sm leading-relaxed">Accede a fondos, concursos y programas de apoyo institucional y de capital semilla.</p>
           </Link>
 
-          <Link href="/cursos" className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-amber-100 transition-all text-left">
-            <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <Link href="/cursos" className="group p-8 rounded-3xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-xl hover:border-[#3B82A0] transition-all text-left">
+            <div className="w-14 h-14 bg-[#EAF3F7] text-[#014F78] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
               <BookOpen className="w-7 h-7" />
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Cursos</h3>
-            <p className="text-slate-600">Capacítate constantemente con la oferta formativa disponible para emprendedores.</p>
+            <h3 className="text-xl font-bold text-[#163A4A] mb-3">Cursos</h3>
+            <p className="text-[#475569] text-sm leading-relaxed">Capacítate continuamente con la oferta formativa especializada para fundadores y equipos.</p>
           </Link>
 
         </div>

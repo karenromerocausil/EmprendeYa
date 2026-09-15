@@ -45,27 +45,27 @@ export default async function InversionesPage() {
              <h2 className="text-xl font-semibold text-slate-900 mb-2">Aún no has interactuado con proyectos</h2>
              <p className="text-slate-500 max-w-md mx-auto mb-6">Explora el directorio y encuentra emprendimientos innovadores para apoyar.</p>
              <Link href="/proyectos">
-               <Button className="bg-indigo-600 hover:bg-indigo-700">Explorar Directorio</Button>
+               <Button className="bg-[#447A00] hover:bg-[#6FAE2A] text-white font-semibold">Explorar Directorio</Button>
              </Link>
           </div>
         ) : (
           <div className="space-y-4">
             {solicitudes.map((sol: any) => (
-              <Card key={sol.id} className="border-slate-100 hover:shadow-md transition-shadow">
-                <CardHeader className="pb-3 border-b border-slate-50 flex flex-row items-center justify-between">
+              <Card key={sol.id} className="border-[#E2E8F0] hover:shadow-md transition-shadow bg-white rounded-2xl">
+                <CardHeader className="pb-3 border-b border-[#E2E8F0] flex flex-row items-center justify-between">
                   <div>
-                    <CardTitle className="text-lg text-slate-900">{sol.projects?.name}</CardTitle>
-                    <CardDescription>
+                    <CardTitle className="text-lg text-[#163A4A]">{sol.projects?.name}</CardTitle>
+                    <CardDescription className="text-[#475569]">
                       Solicitado el {new Date(sol.created_at).toLocaleDateString()}
                     </CardDescription>
                   </div>
-                  {sol.status === 'pendiente' && <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-bold uppercase">En espera</span>}
-                  {sol.status === 'aceptada' && <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold uppercase">Aceptada</span>}
-                  {sol.status === 'rechazada' && <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-bold uppercase">Rechazada</span>}
+                  {sol.status === 'pendiente' && <span className="px-3 py-1 bg-[#EAF3F7] text-[#014F78] border border-[#3B82A0]/20 rounded-full text-xs font-bold uppercase">En espera</span>}
+                  {sol.status === 'aceptada' && <span className="px-3 py-1 bg-[#EEF5E5] text-[#447A00] border border-[#6FAE2A]/20 rounded-full text-xs font-bold uppercase">Aceptada</span>}
+                  {sol.status === 'rechazada' && <span className="px-3 py-1 bg-red-50 text-red-700 border border-red-200 rounded-full text-xs font-bold uppercase">Rechazada</span>}
                 </CardHeader>
                 <CardContent className="pt-4 flex justify-end">
                   <Link href={`/proyectos/${sol.projects?.id}`}>
-                    <Button variant="outline" className="gap-2">
+                    <Button variant="outline" className="gap-2 border-[#E2E8F0] text-[#014F78] hover:bg-[#EAF3F7]">
                       Ver Proyecto <ExternalLink className="w-4 h-4" />
                     </Button>
                   </Link>

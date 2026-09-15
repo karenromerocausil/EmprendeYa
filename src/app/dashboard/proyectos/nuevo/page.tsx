@@ -109,7 +109,7 @@ export default async function NuevoProyectoPage() {
                       id="mainImage" 
                       name="mainImage" 
                       accept="image/png, image/jpeg, image/webp"
-                      className="max-w-xs mx-auto file:bg-indigo-50 file:text-indigo-700 file:border-0 file:rounded-md file:px-4 file:py-2 file:mr-4 file:font-semibold hover:file:bg-indigo-100 cursor-pointer"
+                      className="max-w-xs mx-auto file:bg-[#EEF5E5] file:text-[#447A00] file:border-0 file:rounded-md file:px-4 file:py-2 file:mr-4 file:font-semibold hover:file:bg-[#6FAE2A]/20 cursor-pointer"
                     />
                     <p className="text-xs text-slate-500 mt-2">Formatos permitidos: JPG, PNG, WEBP (Max 5MB)</p>
                   </div>
@@ -118,9 +118,9 @@ export default async function NuevoProyectoPage() {
 
               <div className="flex justify-end gap-4 pt-4 border-t border-slate-100">
                 <Link href="/dashboard/proyectos">
-                  <Button variant="outline" type="button">Cancelar</Button>
+                  <Button variant="outline" type="button" className="border-[#E2E8F0] text-[#014F78] hover:bg-[#EAF3F7]">Cancelar</Button>
                 </Link>
-                <Button type="submit" className="bg-indigo-600 hover:bg-indigo-700">Guardar como Borrador</Button>
+                <Button type="submit" className="bg-[#447A00] hover:bg-[#6FAE2A] text-white font-semibold shadow-md">Guardar como Borrador</Button>
               </div>
             </form>
           </CardContent>
