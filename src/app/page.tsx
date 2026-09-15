@@ -17,20 +17,17 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#F8FAFC]">
       {/* Navbar */}
-      <header className="px-6 py-4 flex items-center justify-between bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-[#E2E8F0]">
-        <div className="flex items-center gap-2.5">
-          <img src="/innova-icon.png" alt="INNOVA LINK Logo" className="w-9 h-9 object-contain rounded-lg shadow-sm" />
-          <span className="text-xl font-black text-[#163A4A] tracking-tight">
-            INNOVA <span className="text-[#447A00]">LINK</span>
-          </span>
+      <header className="px-6 py-3 grid grid-cols-3 items-center bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-[#E2E8F0]">
+        <div className="flex items-center">
+          <img src="/innova-icon.png" alt="INNOVA LINK" className="h-16 w-auto object-contain" />
         </div>
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#475569]" aria-label="Navegación principal">
+        <nav className="hidden md:flex items-center justify-center gap-8 text-sm font-medium text-[#475569]" aria-label="Navegación principal">
           <Link href="/proyectos" className="hover:text-[#014F78] transition-colors">Proyectos</Link>
           <Link href="/eventos" className="hover:text-[#014F78] transition-colors">Eventos</Link>
           <Link href="/convocatorias" className="hover:text-[#014F78] transition-colors">Convocatorias</Link>
           <Link href="/cursos" className="hover:text-[#014F78] transition-colors">Cursos</Link>
         </nav>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-end gap-3">
           <Link href="/login">
             <Button variant="ghost" className="hidden sm:inline-flex text-[#014F78] hover:bg-[#EAF3F7]">
               Iniciar Sesión

@@ -13,7 +13,7 @@ export default function NuevoCursoPage() {
       <div className="max-w-3xl mx-auto space-y-6">
         <div className="flex items-center gap-4">
           <Link href="/admin">
-            <Button variant="ghost" size="icon" className="rounded-full bg-white border shadow-sm">
+            <Button variant="ghost" size="icon" className="rounded-full bg-[#EAF3F7] border border-[#3B82A0]/30 shadow-sm text-[#014F78] hover:bg-[#014F78] hover:text-white transition-all">
               <ArrowLeft className="w-5 h-5" />
             </Button>
           </Link>
@@ -56,7 +56,7 @@ export default function NuevoCursoPage() {
                 <Link href="/admin">
                   <Button variant="outline" type="button">Cancelar</Button>
                 </Link>
-                <Button type="submit" className="bg-amber-600 hover:bg-amber-700">Publicar Curso</Button>
+                <Button type="submit" className="bg-[#447A00] hover:bg-[#6FAE2A] text-white font-semibold shadow-md shadow-[#447A00]/20">Publicar Curso</Button>
               </div>
             </form>
           </CardContent>

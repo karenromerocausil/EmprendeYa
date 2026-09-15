@@ -14,11 +14,8 @@ export default async function RegisterPage(props: {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-[#EEF5E5] via-[#F8FAFC] to-[#EAF3F7] p-4">
-      <div className="mb-6 flex items-center gap-2.5">
-        <img src="/innova-icon.png" alt="INNOVA LINK" className="w-10 h-10 object-contain rounded-xl shadow-md" />
-        <span className="text-2xl font-black text-[#163A4A] tracking-tight">
-          INNOVA <span className="text-[#447A00]">LINK</span>
-        </span>
+      <div className="mb-6">
+        <img src="/innova-icon.png" alt="INNOVA LINK" className="h-14 w-auto object-contain" />
       </div>
 
       <Card className="w-full max-w-md shadow-xl border border-[#E2E8F0] border-t-4 border-t-[#447A00] bg-white/95 backdrop-blur-sm rounded-2xl">

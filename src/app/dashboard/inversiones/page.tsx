@@ -29,8 +29,8 @@ export default async function InversionesPage() {
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="flex items-center gap-4 mb-6">
           <Link href="/dashboard">
-            <Button variant="ghost" size="icon" className="rounded-full bg-white border hover:bg-slate-100 shadow-sm">
-              <ArrowLeft className="w-5 h-5 text-slate-600" />
+            <Button variant="ghost" size="icon" className="rounded-full bg-[#EAF3F7] border border-[#3B82A0]/30 shadow-sm text-[#014F78] hover:bg-[#014F78] hover:text-white transition-all">
+              <ArrowLeft className="w-5 h-5" />
             </Button>
           </Link>
           <div>

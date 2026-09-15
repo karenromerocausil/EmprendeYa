@@ -13,7 +13,7 @@ export default function NuevoEventoPage() {
       <div className="max-w-3xl mx-auto space-y-6">
         <div className="flex items-center gap-4">
           <Link href="/admin">
-            <Button variant="ghost" size="icon" className="rounded-full bg-white border shadow-sm">
+            <Button variant="ghost" size="icon" className="rounded-full bg-[#EAF3F7] border border-[#3B82A0]/30 shadow-sm text-[#014F78] hover:bg-[#014F78] hover:text-white transition-all">
               <ArrowLeft className="w-5 h-5" />
             </Button>
           </Link>
@@ -60,7 +60,7 @@ export default function NuevoEventoPage() {
                 <Link href="/admin">
                   <Button variant="outline" type="button">Cancelar</Button>
                 </Link>
-                <Button type="submit" className="bg-blue-600 hover:bg-blue-700">Publicar Evento</Button>
+                <Button type="submit" className="bg-[#014F78] hover:bg-[#3B82A0] text-white font-semibold shadow-md shadow-[#014F78]/20">Publicar Evento</Button>
               </div>
             </form>
           </CardContent>
