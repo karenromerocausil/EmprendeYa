@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Lightbulb, Calendar, BookOpen, Target, Sparkles } from 'lucide-react'
+import { Navbar } from '@/components/Navbar'
 
 export const metadata: Metadata = {
   title: 'Inicio',
@@ -16,30 +17,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#F8FAFC]">
-      {/* Navbar */}
-      <header className="px-6 py-3 grid grid-cols-3 items-center bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-[#E2E8F0]">
-        <div className="flex items-center">
-          <img src="/innova-icon.png" alt="INNOVA LINK" className="h-16 w-auto object-contain" />
-        </div>
-        <nav className="hidden md:flex items-center justify-center gap-8 text-sm font-medium text-[#475569]" aria-label="Navegación principal">
-          <Link href="/proyectos" className="hover:text-[#014F78] transition-colors">Proyectos</Link>
-          <Link href="/eventos" className="hover:text-[#014F78] transition-colors">Eventos</Link>
-          <Link href="/convocatorias" className="hover:text-[#014F78] transition-colors">Convocatorias</Link>
-          <Link href="/cursos" className="hover:text-[#014F78] transition-colors">Cursos</Link>
-        </nav>
-        <div className="flex items-center justify-end gap-3">
-          <Link href="/login">
-            <Button variant="ghost" className="hidden sm:inline-flex text-[#014F78] hover:bg-[#EAF3F7]">
-              Iniciar Sesión
-            </Button>
-          </Link>
-          <Link href="/register">
-            <Button className="bg-[#447A00] hover:bg-[#6FAE2A] text-white font-medium shadow-md shadow-[#447A00]/20 transition-all hover:scale-[1.02]">
-              Comenzar
-            </Button>
-          </Link>
-        </div>
-      </header>
+      <Navbar />
+
 
       {/* Hero Section */}
       <main id="main-content" className="flex-1 flex flex-col items-center justify-center text-center px-6 py-20 md:py-32 bg-gradient-to-br from-[#EEF5E5] via-[#F8FAFC] to-[#EAF3F7]">

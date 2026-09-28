@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { BookOpen, ExternalLink, DollarSign, Clock } from 'lucide-react'
+import { Navbar } from '@/components/Navbar'
 
 export const metadata: Metadata = {
   title: 'Formación y Cursos',
@@ -25,17 +26,19 @@ export default async function DirectorioCursos() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      <header className="bg-gradient-to-r from-[#014F78] to-[#163A4A] text-white py-16 px-6 relative overflow-hidden shadow-md">
-        <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+      <Navbar />
+      <header className="bg-gradient-to-r from-[#014F78] to-[#163A4A] text-white py-14 px-6 relative overflow-hidden shadow-md">
+        <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-white">Formación y Cursos</h1>
-            <p className="text-[#EAF3F7] max-w-2xl text-lg">Capacítate con los mejores cursos diseñados para potenciar tus habilidades.</p>
+            <h1 className="text-3xl md:text-4xl font-extrabold mb-2 tracking-tight text-white">Formación y Cursos</h1>
+            <p className="text-[#EAF3F7] max-w-2xl text-base">Capacítate con los mejores cursos diseñados para potenciar tus habilidades.</p>
           </div>
           <Link href="/">
-             <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">Volver al Inicio</Button>
+             <Button className="bg-white text-[#014F78] hover:bg-[#EEF5E5] font-bold shadow-md border-0 transition-colors">Volver al Inicio</Button>
           </Link>
         </div>
       </header>
+
 
       <main id="main-content" className="max-w-7xl mx-auto px-6 py-12">
         {!cursos || cursos.length === 0 ? (

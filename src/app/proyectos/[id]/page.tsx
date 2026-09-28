@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { MapPin, Tag, User, ArrowLeft, Mail, CheckCircle2, AlertCircle } from 'lucide-react'
 import { solicitarContacto } from './actions'
+import { Navbar } from '@/components/Navbar'
 
 export default async function ProyectoDetallePage(props: { params: Promise<{ id: string }> }) {
   const params = await props.params
@@ -58,6 +59,7 @@ export default async function ProyectoDetallePage(props: { params: Promise<{ id:
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] pb-20">
+      <Navbar />
       {/* Banner / Header */}
       <div className="bg-gradient-to-r from-[#014F78] to-[#163A4A] w-full h-64 md:h-80 relative overflow-hidden shadow-md">
         <div className="absolute inset-0 opacity-15 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
@@ -66,12 +68,13 @@ export default async function ProyectoDetallePage(props: { params: Promise<{ id:
         )}
         <div className="absolute top-6 left-6 z-10">
            <Link href="/proyectos">
-             <Button variant="ghost" className="text-white hover:bg-white/20 hover:text-white rounded-full">
-               <ArrowLeft className="w-5 h-5 mr-2" /> Volver al Directorio
+             <Button className="bg-white text-[#014F78] hover:bg-[#EEF5E5] font-bold shadow-md border-0 rounded-full px-5 transition-colors">
+               <ArrowLeft className="w-5 h-5 mr-2 text-[#014F78]" /> Volver al Directorio
              </Button>
            </Link>
         </div>
       </div>
+
 
       <main className="max-w-5xl mx-auto px-6 -mt-32 relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
